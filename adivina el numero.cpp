@@ -7,6 +7,7 @@ debe decir si es mayor o menor hasta que acierte*/
 #include<ctime>
 using namespace std;
 
+//enrique paso por aquí
 int main(){
 
 	//Secuencia de numeros aleatorios:
