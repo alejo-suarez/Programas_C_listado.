@@ -1,5 +1,54 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    char operador;
+    double num1, num2, resultado;
+
+    cout << "Calculadora en C++" << endl;
+    cout << "Ingresa la operaci贸n que deseas realizar (+, -, *, /) o 'q' para salir: ";
+
+    while (cin >> operador && operador != 'q') {
+        cout << "Ingresa el primer n煤mero: ";
+        cin >> num1;
+
+        cout << "Ingresa el segundo n煤mero: ";
+        cin >> num2;
+
+        switch (operador) {
+            case '+':
+                resultado = num1 + num2;
+                break;
+            case '-':
+                resultado = num1 - num2;
+                break;
+            case '*':
+                resultado = num1 * num2;
+                break;
+            case '/':
+                if (num2 != 0) {
+                    resultado = num1 / num2;
+                } else {
+                    cout << "隆Error! No se puede dividir entre cero." << endl;
+                    continue;
+                }
+                break;
+            default:
+                cout << "Operador inv谩lido. Int茅ntalo nuevamente." << endl;
+                continue;
+        }
+
+        cout << "El resultado es: " << resultado << endl;
+        cout << "Ingresa la operaci贸n que deseas realizar (+, -, *, /) o 'q' para salir: ";
+    }
+
+    cout << "隆Hasta luego!" << endl;
+    return 0;
+}
+
 /*Calculadora que se ingrese dos numeros y dar a escoger la
-oporaci髇 desea usar. Mostrar el resultado.*/
+oporaci贸n desea usar. Mostrar el resultado.
 #include<iostream>
 #include<conio.h>
 #include<cmath>
@@ -46,7 +95,7 @@ int main(){
 					cout<<"\n El resultado de la resta es:  "<<total<<endl;}
 				
 				
-					//Multiplicaci髇:	
+					//Multiplicaci贸n:	
 					else if(opcion==3){
 						cout<<"Diga primer numero a multiplicar: ";
 						cin>>num1;
@@ -56,7 +105,7 @@ int main(){
 						cout<<"\n El resultado de la multiplicacion es:  "<<total<<endl;}
 					
 					
-						//Divisi髇 con residuo:
+						//Divisi贸n con residuo:
 						else if(opcion==4){
 							cout<<"Diga el numero dividendo: ";
 							cin>>num3;
@@ -67,7 +116,7 @@ int main(){
 							cout<<"El resultado es:  "<<total.quot<<endl;
 							cout<<"El Residuo es: "<<total.rem<<endl;}	
 							
-								//Potenciaci髇:
+								//Potenciaci贸n:
 								else if(opcion==5){
 									cout<<"diga el base de la potencia:  ";
 									cin>>num1;
@@ -76,34 +125,11 @@ int main(){
 									total = pow(num1,num2);
 									cout<<"\n El resultado es:  "<<total<<endl;}													
 									
-									//Error en opci髇:
+									//Error en opci贸n:
 									else if(opcion>5){
 										cout<<"...Opcion NO EXISTE o fuera de rango..."<<endl;}
 						
 									
-	
-	//Opciones y calculo del resultado:
-	/*switch(opcion){
-		case 1:cout<<"diga primer numero a sumar:  ";cin>>num1;cout<<"diga el segundo numero a sumar: ";cin>>num2;total = num1 + num2;break;
-		case 2:cout<<"diga primer numero a restar: ";cin>>num1;cout<<"diga el segundo numero a restar: ";cin>>num2;total = num1 - num2;break;
-		case 3:cout<<"diga primer numero a multiplicar: ";cin>>num1;cout<<"diga el segundo numero a multiplicar: ";cin>>num2;total = num1 * num2;break;
-		case 4:cout<<"diga primer numero a dividir: ";cin>>num3;cout<<"diga el segundo numero a dividir: ";cin>>num4;
-		div_t total; 
-		total = div(num3,num4);
-		cout<<"el resultado es:  "<<total.quot<<endl;
-		cout<<"el Residuo es: "<<total.rem<<endl;break;
-		
-		//case 5:cout<<"diga el base de la potencia:  ";cin>>num1;cout<<"diga el exponente:  ";cin>>num2;total = pow(num1,num2);break;
-	
-		default :cout<<"...Opcion NO EXISTE o fuera de rango...";
-	}*/
-	
-		
-//	cout<<endl;
-	
-	
-	//Exponer el resultado.
-//	cout<<"\n El resultado es:  "<<total<<endl;
 	
 	system ("pause");
 	
@@ -112,3 +138,4 @@ int main(){
 
 
 
+*/
